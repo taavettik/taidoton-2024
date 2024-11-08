@@ -1,11 +1,14 @@
 import fastify from 'fastify';
+import './src/common/db';
+import { getDb } from './src/common/db';
 
 const server = fastify({
   logger: true
 });
 
-server.get('/', (req, res) => {
-  console.log('asd')
+server.get('/', async (req, res) => {
+  const db = await getDb();
+
   res.send('Hello world')
 });
 

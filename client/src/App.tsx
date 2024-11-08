@@ -9,6 +9,10 @@ export function App() {
   <Text variant="h1">
     Taidot on
   </Text>
+
+  <Text variant="body">
+    Taa on vetta
+  </Text>
 </Stack>
     </Page>
 }
