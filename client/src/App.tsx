@@ -4,15 +4,13 @@ import Text from './components/Text';
 import { Page } from './components/Page';
 
 export function App() {
-  return <Page>
-    <Stack axis="y">
-  <Text variant="h1">
-    Taidot on
-  </Text>
+  return (
+    <Page>
+      <Stack axis="y">
+        <Text variant="h1">Taidot on</Text>
 
-  <Text variant="body">
-    Taa on vetta
-  </Text>
-</Stack>
+        <Text variant="body">Taa on vetta</Text>
+      </Stack>
     </Page>
+  );
 }

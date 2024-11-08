@@ -1,4 +1,4 @@
-import React, { HTMLProps, ReactNode } from "react";
+import React, { HTMLProps, ReactNode } from 'react';
 
 interface Props extends HTMLProps<HTMLDivElement> {
   children?: ReactNode;
@@ -6,10 +6,15 @@ interface Props extends HTMLProps<HTMLDivElement> {
 }
 
 export function Stack({ children, axis, ...props }: Props) {
-  return <div style={{
-    display: 'flex',
-    flexDirection: axis === 'x' ? 'row' : 'column',
-  }}>
-    {children}
-  </div>
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: axis === 'x' ? 'row' : 'column',
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  );
 }

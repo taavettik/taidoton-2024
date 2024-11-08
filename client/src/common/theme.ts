@@ -9,8 +9,8 @@ export const theme = {
       element: 'h1',
       fontFamily: 'montserrat',
       fontSize: '32px',
-    }
-  }
-}
+    },
+  },
+};
 
 export type TypographyVariant = keyof typeof theme.typography;
