@@ -4,6 +4,7 @@ import { JSONFilePreset } from "lowdb/node";
 interface Db {
   // TODO
   emails: Array<{
+    employeeID: string;
     company: string;
     timestamp: string;
     numberOfRecipients: number;
