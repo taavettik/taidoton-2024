@@ -29,7 +29,7 @@ export function Stack({
         alignItems: align,
         gap: spacing,
         width,
-        height,
+        minHeight: height,
       }}
       {...props}
     >

@@ -15,7 +15,7 @@ export const Chip = ({
         backgroundColor: '#736565',
         borderRadius: 30,
         padding: 8,
-        gap: 8,
+
         ...styles,
       }}
     >

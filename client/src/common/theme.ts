@@ -10,9 +10,15 @@ export const theme = {
       fontFamily: 'montserrat',
       fontSize: '32px',
     },
+    bodySmall: {
+      element: 'span',
+      fontFamily: 'montserrat',
+      fontSize: '12px',
+    },
   },
   colors: {
     background: '#111418',
+    secondary: '#939BA7',
   },
 };
 
