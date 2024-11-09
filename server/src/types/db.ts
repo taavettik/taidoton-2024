@@ -21,6 +21,13 @@ export type SlackSummary = {
   received: number;
   avgResponseTime: number;
   avgAfterHours: number;
+
+  toxic?: number;
+  friendly?: number;
+  supportive?: number;
+  funny?: number;
+  inspiring?: number;
+  bossy?: number;
 };
 
 export type Company = {
