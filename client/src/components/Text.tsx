@@ -2,6 +2,7 @@ import React, { CSSProperties, HTMLAttributes, ReactNode } from 'react';
 import { theme, TypographyVariant } from '../common/theme';
 
 interface Props extends HTMLAttributes<HTMLSpanElement> {
+  // styles?: CSSProperties;
   children?: ReactNode;
   variant?: TypographyVariant;
   align?: CSSProperties['textAlign'];
