@@ -1,17 +1,10 @@
 import { FastifyInstance } from "fastify";
-import { getCompanyInsights } from "../services/employee";
-import { getEmployeeInsights } from "../../sandrahihii/getAnalysis";
+import { getCompanies } from "../services/employee";
 
 export const employeeRoutes = (server: FastifyInstance) => {
-  server.get("/employees", async (req, res) => {
-    const { ratioOfAfterHoursEmails } = await getCompanyInsights();
+  server.get("/companies", async (req, res) => {
+    const companyData = await getCompanies();
 
-    res.send({ ratioOfAfterHoursEmails });
-  });
-
-  server.get("/analysis", async (req, res) => {
-    const { analysis } = await getEmployeeInsights();
-
-    res.send({ analysis });
+    res.send(companyData);
   });
 };

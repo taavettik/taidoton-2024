@@ -32,9 +32,15 @@ interface Db {
     avgRecipients: number;
     avgThreadLength: number;
   }>;
+  companies: Array<{
+    name: string;
+    salaryRange: [number, number];
+    description: string;
+    tags: string[];
+  }>;
 }
 
-const defaultData: Db = { emails: [], emailsSummary: [] };
+const defaultData: Db = { emails: [], emailsSummary: [], companies: [] };
 
 let db: Low<typeof defaultData> | null = null;
 

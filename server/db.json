@@ -242,5 +242,23 @@
       "messageLength": 50,
       "recipientRoleLevel": "same"
     }
+  ],
+  "emailsSummary": [],
+  "companies": [
+    {
+      "name": "CompanyA",
+      "salaryRange": [50, 100],
+      "description": "CompanyA is a great company!"
+    },
+    {
+      "name": "CompanyB",
+      "salaryRange": [32, 40],
+      "description": "CompanyB is super chill lmao!"
+    },
+    {
+      "name": "CompanyC",
+      "salaryRange": [100, 200],
+      "description": "CompanyC is bussin fr fr makin hella bread"
+    }
   ]
 }
