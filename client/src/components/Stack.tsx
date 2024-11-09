@@ -6,6 +6,8 @@ interface Props extends HTMLProps<HTMLDivElement> {
   align?: CSSProperties['alignItems'];
   justify?: CSSProperties['justifyContent'];
   spacing?: number;
+  width?: number | string;
+  height?: number | string;
 }
 
 export function Stack({
@@ -14,6 +16,8 @@ export function Stack({
   align,
   justify,
   spacing,
+  width,
+  height,
   ...props
 }: Props) {
   return (
@@ -24,6 +28,8 @@ export function Stack({
         justifyContent: justify,
         alignItems: align,
         gap: spacing,
+        width,
+        height,
       }}
       {...props}
     >

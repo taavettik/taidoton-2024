@@ -17,17 +17,27 @@ export function App() {
     })();
   }, []);
 
+  if (!data) {
+    return <Page>Loading...</Page>;
+  }
+
   return (
     <Page>
       <PageHeader title={data?.name} subtitle={`Dashboard`}></PageHeader>
 
-      <Stack axis="y" spacing={16} align="center">
+      <Stack width="100%" axis="y" spacing={16} align="center">
         <Text variant="body" align="center">
           <b>Burneroo</b> goes stopperoo!
         </Text>
 
-        <Stack axis="x">
-          <Gauge progress={60} score={data?.connectedness} size="small" />
+        <Stack width="100%" axis="x" align="center" spacing={16}>
+          <Gauge
+            progress={60}
+            score={`${data?.connectedness * 100}%`}
+            size="small"
+          />
+
+          <Text variant="body">Connectedness</Text>
         </Stack>
 
         <Button>Go wow</Button>
