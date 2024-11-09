@@ -80,6 +80,7 @@ function CompanyProfile({
         style={{
           position: 'relative',
           objectFit: 'cover',
+          objectPosition: 'center',
           minHeight: '500px',
           zIndex: -1,
           minWidth: '370px',

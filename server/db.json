@@ -814,14 +814,14 @@
       "name": "HATCHED Consulting",
       "tags": ["High speed", "Grindset", "Torstaikalle"],
       "salaryRange": [30, 105],
-      "description": "Hatched consultingilla saat myrkyistä myry irti :)"
+      "description": "Hatched consulting is one of the biggest consulting and banking companies in the world. Ou jee!"
     },
     {
       "slug": "onion_corp",
       "name": "Onion corp",
       "tags": ["Junior friendly", "Work-life balance", "Integrity"],
       "salaryRange": [80, 140],
-      "description": "Onion corp! Ou jee"
+      "description": "Onion corp is about onion banking. We provide long term storages for onions and sell onion options!"
     }
   ]
 }
