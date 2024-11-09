@@ -13,6 +13,7 @@ import { CiCircleCheck } from 'react-icons/ci';
 import { Spacer } from '../../components/Spacer';
 import { theme } from '../../common/theme';
 import { useQuery } from '@tanstack/react-query';
+import { Divider } from '../../components/Divider';
 
 export function SandraPage() {
   const { data: companies } = useQuery<ClientCompanyData[]>({
@@ -113,10 +114,10 @@ function CompanyProfile({
               marginRight: '-20px',
               fontSize: 30,
               fontFamily: 'inter',
-              letterSpacing: 21,
+              letterSpacing: 15,
             }}
           >
-            HATCHED
+            {data.name.toUpperCase()}
           </Text>
           <Text
             style={{
@@ -201,7 +202,14 @@ function CompanyProfile({
         </Chip>
       </div>
 
+      <Divider />
+
       <Stack axis="x">
+        <Stack width="100%" axis="y" align="center" spacing={16}>
+          <Metric title="Connectedness" value={data.connectedness * 100} />
+
+          <Text variant="body">Connectedness</Text>
+        </Stack>
         <Stack width="100%" axis="y" align="center" spacing={16}>
           <Gauge
             progress={data.connectedness * 100}
@@ -240,6 +248,15 @@ function CompanyProfile({
   );
 }
 
+const Metric = ({ title, value }: { title: string; value: number }) => {
+  return (
+    <Stack axis="x" justify="space-between" width="350px" spacing={4}>
+      <Text variant="body">{title}</Text>
+      <Text variant="body">{value}</Text>
+    </Stack>
+  );
+};
+
 const ProgressBar = ({
   sections,
   progress,
@@ -255,7 +272,7 @@ const ProgressBar = ({
           style={{
             width: `calc(100% / ${sections})`,
             height: '4px',
-            backgroundColor: i < progress ? 'white' : '#515A66',
+            backgroundColor: i < progress ? 'white' : theme.colors.secondary,
             borderRadius: 20,
           }}
         ></div>
