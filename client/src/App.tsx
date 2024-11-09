@@ -1,77 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import Text from './components/Text';
-import { Page, PageHeader } from './components/Page';
-import { Button } from './components/Button';
-import { Gauge } from './components/Gauge';
-import { Stack } from './components/Stack';
-import { EmployerData } from './api';
-import { api } from './common/api';
-import { LinearGauge } from './components/LinearGauge';
-import tenor from '../assets/tenor.gif';
+import React from 'react';
+import {
+  Outlet,
+  RootRoute,
+  Route,
+  Router,
+  RouterProvider,
+} from '@tanstack/react-router';
+import { TaavettiPage } from './pages/taavetti/TaavettiPage';
+import { HomePage } from './pages/home/HomePage';
+import { Page } from './components/Page';
+
+const rootRoute = new RootRoute({
+  component: () => <Outlet />,
+});
+
+const homeRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: '/',
+  component: HomePage,
+});
+
+const taavettiRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: '/taavetti',
+  component: TaavettiPage,
+});
+
+const routeTree = rootRoute.addChildren([homeRoute, taavettiRoute]);
+
+const router = new Router({ routeTree });
 
 export function App() {
-  const [data, setData] = useState<EmployerData>();
-
-  useEffect(() => {
-    (async () => {
-      const response = await api.getCompanyData('taidot_on');
-      setData(response);
-    })();
-  }, []);
-
-  if (!data) {
-    return <Page>Loading...</Page>;
-  }
-
-  return (
-    <Page>
-      <PageHeader title={data?.name} subtitle={`Dashboard`}></PageHeader>
-
-      <Stack width="100%" axis="y" spacing={24} align="center">
-        <Text variant="body" align="center">
-          <b>Burneroo</b> goes stopperoo!
-        </Text>
-
-        <Stack axis="x">
-          <Stack width="100%" axis="y" align="center" spacing={16}>
-            <Gauge
-              progress={data.connectedness * 100}
-              score={`${data?.connectedness * 100}%`}
-              size="small"
-            />
-
-            <Text variant="body">Connectedness</Text>
-          </Stack>
-
-          <Stack width="100%" axis="y" align="center" spacing={16}>
-            <Gauge
-              progress={data.afterHourEmailsRatio * 100}
-              score={`${data?.afterHourEmailsRatio * 100}%`}
-              size="small"
-            />
-
-            <Text align="center" variant="body">
-              After hours email ratio
-            </Text>
-          </Stack>
-        </Stack>
-
-        <Stack width="100%" axis="y" align="center">
-          <Text variant="body">Salary range</Text>
-
-          <LinearGauge
-            startLabel={`${data.salaryRange[0] * 1000}€`}
-            endLabel={`${data.salaryRange[1] * 1000}€`}
-            progress={50}
-          ></LinearGauge>
-        </Stack>
-
-        <Button>Go wow</Button>
-
-        <Stack axis="y">
-          <img src={tenor} style={{ borderRadius: 8 }} />
-        </Stack>
-      </Stack>
-    </Page>
-  );
+  return <RouterProvider router={router} />;
 }
