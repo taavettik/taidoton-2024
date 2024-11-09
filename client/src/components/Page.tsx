@@ -13,6 +13,7 @@ export function Page({ children }: Props) {
         display: 'flex',
         justifyContent: 'center',
         paddingTop: 20,
+        position: 'relative',
       }}
     >
       <div style={{ position: 'absolute', top: 0 }}>

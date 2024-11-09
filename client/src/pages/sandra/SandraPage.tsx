@@ -14,6 +14,7 @@ import { Spacer } from '../../components/Spacer';
 import { theme } from '../../common/theme';
 import { useQuery } from '@tanstack/react-query';
 import { Divider } from '../../components/Divider';
+import { LikeButtonsEtc } from './LikeButtonsEtc';
 
 export function SandraPage() {
   const { data: companies } = useQuery<ClientCompanyData[]>({
@@ -243,7 +244,8 @@ function CompanyProfile({
         ></LinearGauge>
       </Stack>
 
-      <Button onClick={() => goNext()}>Go wow</Button>
+      <LikeButtonsEtc onClick={() => goNext()} />
+      <div style={{ height: '100px' }} />
     </Page>
   );
 }
