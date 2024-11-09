@@ -7,13 +7,14 @@ import { Stack } from './components/Stack';
 import { EmployerData } from './api';
 import { api } from './common/api';
 import { LinearGauge } from './components/LinearGauge';
+import tenor from '../assets/tenor.gif';
 
 export function App() {
   const [data, setData] = useState<EmployerData>();
 
   useEffect(() => {
     (async () => {
-      const response = await api.getCompanyData('taidoton');
+      const response = await api.getCompanyData('taidot_on');
       setData(response);
     })();
   }, []);
@@ -66,6 +67,10 @@ export function App() {
         </Stack>
 
         <Button>Go wow</Button>
+
+        <Stack axis="y">
+          <img src={tenor} style={{ borderRadius: 8 }} />
+        </Stack>
       </Stack>
     </Page>
   );

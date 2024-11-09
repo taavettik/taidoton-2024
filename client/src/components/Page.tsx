@@ -19,14 +19,17 @@ export function Page({ children }: Props) {
           flexDirection: 'column',
           alignItems: 'center',
           width: 350 - 40,
-          height: 770,
+          height: 730,
           backgroundColor: '#111418',
           borderRadius: 40,
           paddingTop: 20,
           paddingLeft: 20,
           paddingRight: 20,
+          paddingBottom: 20,
+          marginBottom: 20,
           zIndex: 20,
           gap: 8,
+          overflow: 'auto',
         }}
       >
         {children}
