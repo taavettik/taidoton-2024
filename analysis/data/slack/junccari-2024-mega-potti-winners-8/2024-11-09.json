@@ -1,0 +1,23 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U0808E4NUBW",
+        "text": "<@U0808E4NUBW> has joined the channel",
+        "type": "message",
+        "ts": "1731142408.078189"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U0805UNUM7C",
+        "text": "<@U0805UNUM7C> has joined the channel",
+        "type": "message",
+        "ts": "1731142449.031869"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U08033PRCUD",
+        "text": "<@U08033PRCUD> has joined the channel",
+        "type": "message",
+        "ts": "1731142457.577839"
+    }
+]

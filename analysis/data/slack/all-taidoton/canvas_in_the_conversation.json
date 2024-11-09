@@ -1,0 +1,27 @@
+[
+{
+    "id": "F0805UKFQEN",
+    "created": 1731142246,
+    "name": "Company_Handbook",
+    "title": "Company Handbook",
+    "mimetype": "application\/vnd.slack-docs",
+    "filetype": "quip",
+    "pretty_type": "Canvas",
+    "user": "USLACKBOT",
+    "editable": true,
+    "size": 1396,
+    "mode": "quip",
+    "is_public": true,
+    "is_tombstoned": false,
+    "public_url_shared": false,
+    "date_delete": 0,
+    "url_private_download": "https:\/\/files.slack.com\/files-pri\/T080JKAE58R-F0805UKFQEN\/download\/canvas?t=xoxe-8018656481297-8005980856642-8005980912722-e36e939ccbbb30db370c2ad6b970c9f1",
+    "shares": [
+        {
+            "team": "T080JKAE58R",
+            "channel": "C08033LC97X"
+        }
+    ],
+    "permalink": "https:\/\/taidoton.slack.com\/canvas\/C08033LC97X"
+}
+]

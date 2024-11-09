@@ -1,0 +1,137 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U0808E4NUBW",
+        "text": "<@U0808E4NUBW> has joined the channel",
+        "type": "message",
+        "ts": "1731142243.978749"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U0805UNUM7C",
+        "text": "<@U0805UNUM7C> has joined the channel",
+        "type": "message",
+        "ts": "1731142449.064279"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U08033PRCUD",
+        "text": "<@U08033PRCUD> has joined the channel",
+        "type": "message",
+        "ts": "1731142457.606329"
+    },
+    {
+        "user": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731142464.109089",
+        "client_msg_id": "a6d40fd3-6d88-4439-85a4-8a2a6f26ce67",
+        "text": "Kiitos ryhmään pääsystä!",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "g0ff8c5da557",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/0ff8c5da5574b4a007b7dbcf11bf0284.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "Hugo",
+            "real_name": "Hugo",
+            "display_name": "Hugo",
+            "team": "T080JKAE58R",
+            "name": "hugo.hutri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sFvgx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Kiitos ryhmään pääsystä!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U08033PRCUD",
+        "type": "message",
+        "ts": "1731142470.140249",
+        "client_msg_id": "b6b890d2-295b-41fa-99c9-0d2a77050a1c",
+        "text": "Moikkulii",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "gec8983c2405",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/ec8983c24055e5b22f6a44e9eadf3304.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-72.png",
+            "first_name": "Sankkuli",
+            "real_name": "Sankkuli",
+            "display_name": "Sankkuli",
+            "team": "T080JKAE58R",
+            "name": "sandra.schroder",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "niHb8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Moikkulii"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731142501.800499",
+        "client_msg_id": "2b783cdd-6b0f-430f-bf94-800613f2ffc7",
+        "text": "Mitä sä täällä teet....",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "g0ff8c5da557",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/0ff8c5da5574b4a007b7dbcf11bf0284.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "Hugo",
+            "real_name": "Hugo",
+            "display_name": "Hugo",
+            "team": "T080JKAE58R",
+            "name": "hugo.hutri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jcAI9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Mitä sä täällä teet...."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
