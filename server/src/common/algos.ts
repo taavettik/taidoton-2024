@@ -42,5 +42,12 @@ export const calculateSeriousOrRelaxed = (data: SourceData) => {
 };
 
 export const calculateConnectedness = (data: SourceData) => {
-  return 0.3;
+  const internalEmails = data.emails.reduce((acc, email) => {
+    return acc + email.internalSent;
+  }, 0);
+  const totalEmails = data.emails.reduce((acc, email) => {
+    return acc + email.sent;
+  }, 0);
+
+  return internalEmails / totalEmails;
 };

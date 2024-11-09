@@ -15,12 +15,11 @@ export const getCompanies = async () => {
 
   const companiesWithInsights: ClientCompanyData[] = [];
 
-  const sourceData: SourceData = {
-    emails,
-    slack,
-  };
-
   for (const company of companies) {
+    const sourceData: SourceData = {
+      emails: emails.filter((e) => e.company === company.slug),
+      slack: slack.filter((s) => s.company === company.slug),
+    };
     const burnoutRisk = calculateBurnoutRisk(sourceData);
     const seriousOrRelaxed = calculateSeriousOrRelaxed(sourceData);
     const connectedness = calculateConnectedness(sourceData);
