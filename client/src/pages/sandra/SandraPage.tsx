@@ -30,8 +30,6 @@ export function SandraPage() {
 
   const [index, setIndex] = useState(0);
 
-  console.log('companies', companies);
-
   const company = companies?.[index];
 
   if (!company) {
@@ -56,14 +54,6 @@ function CompanyProfile({
   goNext: () => void;
 }) {
   const data = company;
-  // const [data, setData] = useStateborderSize<EmployerData>();
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const response = await api.getCompanyData('taidot_on');
-  //     setData(response);
-  //   })();
-  // }, []);
 
   if (!company) {
     return <Page>Loading...</Page>;
@@ -111,7 +101,7 @@ function CompanyProfile({
             align="center"
             style={{ color: 'black', marginLeft: '10px' }}
           >
-            82%
+            {Math.ceil(Math.random() * 50 + 50)} %
           </Text>
         </Chip>
         <Spacer axis="y" size={340} />
@@ -153,7 +143,6 @@ function CompanyProfile({
           </Text>
         </Stack>
       </Stack>
-
       <div
         style={{
           width: '100%',
@@ -164,105 +153,114 @@ function CompanyProfile({
           gap: 6,
         }}
       >
-        <Chip styles={chipStyles}>
-          <Text
-            variant="bodySmall"
-            align="center"
-            style={{ color: theme.colors.secondary }}
-          >
-            Integrity
-          </Text>
-        </Chip>
-        <Chip styles={chipStyles}>
-          <Text
-            variant="bodySmall"
-            align="center"
-            style={{ color: theme.colors.secondary }}
-          >
-            Integrity
-          </Text>
-        </Chip>
-        <Chip styles={chipStyles}>
-          <Text
-            variant="bodySmall"
-            align="center"
-            style={{ color: theme.colors.secondary }}
-          >
-            Integrity
-          </Text>
-        </Chip>
-        <Chip styles={chipStyles}>
-          <Text
-            variant="bodySmall"
-            align="center"
-            style={{ color: theme.colors.secondary }}
-          >
-            Integrity
-          </Text>
-        </Chip>
-        <Chip styles={chipStyles}>
-          <Text
-            variant="bodySmall"
-            align="center"
-            style={{ color: theme.colors.secondary }}
-          >
-            Integrity
-          </Text>
-        </Chip>
+        {data.tags.map((tag) => (
+          <Chip key={tag} styles={chipStyles}>
+            <Text
+              variant="bodySmall"
+              align="center"
+              style={{ color: theme.colors.secondary }}
+            >
+              {tag}
+            </Text>
+          </Chip>
+        ))}
       </div>
+      <Divider />
+      <Metric
+        title="Communication tone"
+        value={data.seriousOrRelaxed * 100}
+        minName="Serious"
+        maxName="Relaxed"
+      />
 
+      <Spacer axis="y" size={8} />
+      <Metric
+        title="Connectedness"
+        value={data.connectedness * 100}
+        minName="Hierarchical"
+        maxName="Flat"
+      />
+
+      <Spacer axis="y" size={8} />
+      <Metric
+        title="Grindset"
+        value={data.burnoutRisk * 100}
+        minName="Chill"
+        maxName="Sigma"
+      />
       <Divider />
 
-      <Stack axis="x">
-        <Stack width="100%" axis="y" align="center" spacing={16}>
-          <Metric title="Connectedness" value={data.connectedness * 100} />
+      <Text
+        variant="body"
+        align="center"
+        style={{ color: theme.colors.secondary }}
+      >
+        {data.description}
+      </Text>
 
-          <Text variant="body">Connectedness</Text>
-        </Stack>
-        <Stack width="100%" axis="y" align="center" spacing={16}>
-          <Gauge
-            progress={data.connectedness * 100}
-            score={`${data?.connectedness * 100}%`}
-            size="small"
-          />
-
-          <Text variant="body">Connectedness</Text>
-        </Stack>
-
-        <Stack width="100%" axis="y" align="center" spacing={16}>
-          <Gauge
-            progress={data.burnoutRisk * 100}
-            score={`${data?.burnoutRisk * 100}%`}
-            size="small"
-          />
-
-          <Text align="center" variant="body">
-            Burnout risk ratio
-          </Text>
-        </Stack>
-      </Stack>
-
-      <Stack width="100%" axis="y" align="center">
-        <Text variant="body">Salary range</Text>
-
-        <LinearGauge
-          startLabel={`${data.salaryRange[0] * 1000}€`}
-          endLabel={`${data.salaryRange[1] * 1000}€`}
-          progress={50}
-        ></LinearGauge>
-      </Stack>
-
+      <Spacer axis="y" size={80} />
       <LikeButtonsEtc onClick={() => goNext()} />
-      <div style={{ height: '100px' }} />
     </Page>
   );
 }
 
-const Metric = ({ title, value }: { title: string; value: number }) => {
+const Metric = ({
+  title,
+  minName,
+  maxName,
+  value,
+}: {
+  title: string;
+  value: number;
+  minName: string;
+  maxName: string;
+}) => {
   return (
-    <Stack axis="x" justify="space-between" width="350px" spacing={4}>
-      <Text variant="body">{title}</Text>
-      <Text variant="body">{value}</Text>
+    <Stack axis="y" justify="space-between" width="100%" spacing={8}>
+      <Text variant="bodySmall" style={{ color: theme.colors.secondary }}>
+        {title}
+      </Text>
+      <MetricBar minName={minName} maxName={maxName} percentage={value} />
+    </Stack>
+  );
+};
+const MetricBar = ({
+  minName,
+  maxName,
+  percentage,
+}: {
+  minName: string;
+  maxName: string;
+  percentage: number;
+}) => {
+  return (
+    <Stack axis="y" spacing={4} justify="center" align="center">
+      <Stack axis="x" justify="space-between" width="100%" spacing={4}>
+        <Text variant="body" style={{ color: theme.colors.secondary }}>
+          {minName}
+        </Text>
+        <Text variant="body" style={{ color: theme.colors.secondary }}>
+          {maxName}
+        </Text>
+      </Stack>
+      <Spacer axis="y" size={8} />
+      <div
+        style={{
+          width: '100%',
+          height: '8px',
+          backgroundColor: 'white',
+          borderRadius: '4px',
+        }}
+      >
+        <div
+          style={{
+            width: `${percentage}%`,
+            height: '8px',
+            backgroundColor: theme.colors.tinderRed,
+            borderRadius: '4px',
+          }}
+        />
+      </div>
     </Stack>
   );
 };

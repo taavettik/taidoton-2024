@@ -20,6 +20,7 @@ export const theme = {
     background: '#111418',
     secondary: '#939BA7',
     muted: '#453C3C',
+    tinderRed: '#f54765',
   },
 };
 
