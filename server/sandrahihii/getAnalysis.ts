@@ -13,6 +13,7 @@ interface EmailEntry {
   messageTone: string;
   messageLength: number;
   recipientRoleLevel: string;
+  employeeID: string;
 }
 
 interface SummaryEntry {
@@ -36,18 +37,19 @@ const readEmailData = (filePath: string): EmailEntry[] => {
     .map((row) => row.split(","))
     .slice(1)
     .map((row) => ({
-      timestamp: row[0],
-      numberOfRecipients: parseInt(row[1]),
-      numberOfCCs: parseInt(row[2]),
-      numberOfBCCs: parseInt(row[3]),
-      recipientType: row[4],
-      lengthOfThread: parseInt(row[5]),
-      responseTime: parseInt(row[6]),
-      titleTone: row[7],
-      titleLength: parseInt(row[8]),
-      messageTone: row[9],
-      messageLength: parseInt(row[10]),
-      recipientRoleLevel: row[11],
+      timestamp: row[1],
+      numberOfRecipients: parseInt(row[2]),
+      numberOfCCs: parseInt(row[3]),
+      numberOfBCCs: parseInt(row[4]),
+      recipientType: row[5],
+      lengthOfThread: parseInt(row[6]),
+      responseTime: parseInt(row[7]),
+      titleTone: row[8],
+      titleLength: parseInt(row[9]),
+      messageTone: row[10],
+      messageLength: parseInt(row[11]),
+      recipientRoleLevel: row[12],
+      employeeID: row[13],
     }));
   return data;
 };
@@ -58,15 +60,9 @@ export function analyzeEmailData(filePath: string): SummaryEntry[] {
 
   const summaryMap: { [key: string]: SummaryEntry } = {};
 
-  // Process each email entry
   emailData.forEach((email) => {
     const date = email.timestamp.split("T")[0];
-    const employeeID =
-      email.recipientRoleLevel === "same"
-        ? "E001"
-        : email.recipientRoleLevel === "above"
-        ? "E002"
-        : "E003";
+    const employeeID = email.employeeID;
     const department =
       employeeID === "E001"
         ? "Product Dev"
@@ -78,9 +74,9 @@ export function analyzeEmailData(filePath: string): SummaryEntry[] {
 
     if (!summaryMap[key]) {
       summaryMap[key] = {
-        date,
-        employeeID,
-        department,
+        date: date,
+        employeeID: employeeID,
+        department: department,
         sent: 0,
         received: 0,
         internalSent: 0,
@@ -128,7 +124,7 @@ export function analyzeEmailData(filePath: string): SummaryEntry[] {
 }
 
 export const getEmployeeInsights = async () => {
-  const filePath = "./utils/emailData.csv";
+  const filePath = "./sandrahihii/emailData.csv";
   const analysis = analyzeEmailData(filePath);
 
   return { analysis };
