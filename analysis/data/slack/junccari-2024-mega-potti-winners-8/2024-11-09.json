@@ -1,0 +1,75 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U0808E4NUBW",
+        "text": "<@U0808E4NUBW> has joined the channel",
+        "type": "message",
+        "ts": "1731142408.078189"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U0805UNUM7C",
+        "text": "<@U0805UNUM7C> has joined the channel",
+        "type": "message",
+        "ts": "1731142449.031869"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U08033PRCUD",
+        "text": "<@U08033PRCUD> has joined the channel",
+        "type": "message",
+        "ts": "1731142457.577839"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U0808E83U9J",
+        "text": "<@U0808E83U9J> has joined the channel",
+        "type": "message",
+        "ts": "1731149345.419769"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U0808E867QC",
+        "text": "<@U0808E867QC> has joined the channel",
+        "type": "message",
+        "ts": "1731159449.779759"
+    },
+    {
+        "user": "U0808E867QC",
+        "type": "message",
+        "ts": "1731167166.412779",
+        "client_msg_id": "802c7ca2-f237-4714-b092-a7a1516773e3",
+        "text": "moi",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "8be64e9762a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-09\/8018999229585_8be64e9762a104d96b4b_72.png",
+            "first_name": "Taavetti",
+            "real_name": "Taavetti Kukkonen",
+            "display_name": "Taavetti Kukkonen",
+            "team": "T080JKAE58R",
+            "name": "taavetti.kukkonen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fYIGC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "moi"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

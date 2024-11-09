@@ -1,0 +1,489 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U0805UNUM7C",
+        "text": "<@U0805UNUM7C> has joined the channel",
+        "type": "message",
+        "ts": "1731154463.417899"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U0808E4NUBW",
+        "text": "<@U0808E4NUBW> has joined the channel",
+        "inviter": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731154469.866629"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U08033PRCUD",
+        "text": "<@U08033PRCUD> has joined the channel",
+        "inviter": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731154469.998169"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U0808E83U9J",
+        "text": "<@U0808E83U9J> has joined the channel",
+        "inviter": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731154470.061839"
+    },
+    {
+        "user": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731154490.857589",
+        "client_msg_id": "a906a57a-8bb8-43fb-9445-00e428907e41",
+        "text": "Haluisin antaa anonyymisti palautetta että Sankkuli kiusaa yleensä täällä chatissa",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "g0ff8c5da557",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/0ff8c5da5574b4a007b7dbcf11bf0284.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "Hugo",
+            "real_name": "Hugo",
+            "display_name": "Hugo",
+            "team": "T080JKAE58R",
+            "name": "hugo.hutri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fYC9c",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Haluisin antaa anonyymisti palautetta että Sankkuli kiusaa yleensä täällä chatissa"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0808E83U9J",
+        "type": "message",
+        "ts": "1731154982.059679",
+        "client_msg_id": "fdbf2ba6-9037-4378-81e7-edb1368d2cea",
+        "text": "Mitä tarkoitat? Tämä on vakava syytös",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "gcc6bfaf025e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/cc6bfaf025e53e0b161d136dadf65d82.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Ella",
+            "real_name": "Ella",
+            "display_name": "Ella",
+            "team": "T080JKAE58R",
+            "name": "ella.huttunen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "L7Qtk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Mitä tarkoitat? Tämä on vakava syytös"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731155955.868049",
+        "client_msg_id": "1107e93d-0a72-43c4-9fee-7a3a63bad045",
+        "text": "Yrittää myrkyttää",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "g0ff8c5da557",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/0ff8c5da5574b4a007b7dbcf11bf0284.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "Hugo",
+            "real_name": "Hugo",
+            "display_name": "Hugo",
+            "team": "T080JKAE58R",
+            "name": "hugo.hutri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mwATp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yrittää myrkyttää"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731155961.166879",
+        "client_msg_id": "8d239186-ce00-4927-b6ad-f93c4c8dc61b",
+        "text": "Ja haukkuu",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "g0ff8c5da557",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/0ff8c5da5574b4a007b7dbcf11bf0284.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "Hugo",
+            "real_name": "Hugo",
+            "display_name": "Hugo",
+            "team": "T080JKAE58R",
+            "name": "hugo.hutri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wNAtC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ja haukkuu"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731155964.109859",
+        "client_msg_id": "b8faeaa7-c7be-44ba-9269-16d27b48de0d",
+        "text": "Ja se on tyhmä",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "g0ff8c5da557",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/0ff8c5da5574b4a007b7dbcf11bf0284.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "Hugo",
+            "real_name": "Hugo",
+            "display_name": "Hugo",
+            "team": "T080JKAE58R",
+            "name": "hugo.hutri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qch7x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ja se on tyhmä"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U0808E867QC",
+        "text": "<@U0808E867QC> has joined the channel",
+        "type": "message",
+        "ts": "1731159449.850239"
+    },
+    {
+        "user": "U0808E867QC",
+        "type": "message",
+        "ts": "1731159519.117619",
+        "client_msg_id": "a52541fe-6af5-45d5-861f-156331e2a1e1",
+        "text": "Oho, Hugo, ei nyt liioitella! Sankkuli on ehkä vähän, no... omaperäinen, mutta ei se nyt sentään myrkyttäjäksi ylenny! Paitsi ehkä korkeintaan niille epäonnisille keittoresepteilleen, joita kukaan ei uskalla enää maistaa. Ja jos puhutaan haukkumisesta... no, ehkä se oppi sen joltakulta täällä.",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "8be64e9762a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-09\/8018999229585_8be64e9762a104d96b4b_72.png",
+            "first_name": "Taavetti",
+            "real_name": "Taavetti Kukkonen",
+            "display_name": "Taavetti Kukkonen",
+            "team": "T080JKAE58R",
+            "name": "taavetti.kukkonen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pzKXC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oho, Hugo, ei nyt liioitella! Sankkuli on ehkä vähän, no... omaperäinen, mutta ei se nyt sentään myrkyttäjäksi ylenny! Paitsi ehkä korkeintaan niille epäonnisille keittoresepteilleen, joita kukaan ei uskalla enää maistaa. Ja jos puhutaan haukkumisesta... no, ehkä se oppi sen joltakulta täällä."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731160193.631039",
+        "client_msg_id": "1bf650e4-68b9-4830-961c-8fc542cbb2b1",
+        "text": "Ei toi ollu hugo joka laittoi ton viestin",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "g0ff8c5da557",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/0ff8c5da5574b4a007b7dbcf11bf0284.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "Hugo",
+            "real_name": "Hugo",
+            "display_name": "Hugo",
+            "team": "T080JKAE58R",
+            "name": "hugo.hutri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PJ\/Qi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ei toi ollu hugo joka laittoi ton viestin"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0805UNUM7C",
+        "type": "message",
+        "ts": "1731160212.507469",
+        "client_msg_id": "6c6806be-e193-41c1-9203-fa97e3757b4a",
+        "text": "se oli amonyymiumuumi",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "g0ff8c5da557",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/0ff8c5da5574b4a007b7dbcf11bf0284.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "Hugo",
+            "real_name": "Hugo",
+            "display_name": "Hugo",
+            "team": "T080JKAE58R",
+            "name": "hugo.hutri",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Kufh6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "se oli amonyymiumuumi"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0808E83U9J",
+        "type": "message",
+        "ts": "1731166956.977079",
+        "client_msg_id": "0a0c69c5-aeaf-4cd4-baa3-bff33ddfcab1",
+        "text": "mikä on teidän lempi kukka?",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "gcc6bfaf025e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/cc6bfaf025e53e0b161d136dadf65d82.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "Ella",
+            "real_name": "Ella",
+            "display_name": "Ella",
+            "team": "T080JKAE58R",
+            "name": "ella.huttunen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NhgtJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "mikä on teidän lempi kukka?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0808E867QC",
+        "type": "message",
+        "ts": "1731166964.958869",
+        "client_msg_id": "4138aa62-f9fb-44f0-bf63-b8f4d83e8da8",
+        "text": "lol joku kukka",
+        "team": "T080JKAE58R",
+        "user_team": "T080JKAE58R",
+        "source_team": "T080JKAE58R",
+        "user_profile": {
+            "avatar_hash": "8be64e9762a1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-11-09\/8018999229585_8be64e9762a104d96b4b_72.png",
+            "first_name": "Taavetti",
+            "real_name": "Taavetti Kukkonen",
+            "display_name": "Taavetti Kukkonen",
+            "team": "T080JKAE58R",
+            "name": "taavetti.kukkonen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nUqFL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "lol joku kukka"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "mä tykkään täst kukasta",
+        "files": [
+            {
+                "id": "F0806BH7BK5",
+                "created": 1731166986,
+                "timestamp": 1731166986,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U0808E867QC",
+                "user_team": "T080JKAE58R",
+                "editable": false,
+                "size": 439830,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T080JKAE58R-F0806BH7BK5\/image.png?t=xoxe-8018656481297-8006490984211-8003730983701-ddbaefde61b6b6d1941d3a0ab7052882",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T080JKAE58R-F0806BH7BK5\/download\/image.png?t=xoxe-8018656481297-8006490984211-8003730983701-ddbaefde61b6b6d1941d3a0ab7052882",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T080JKAE58R-F0806BH7BK5-338a872ea3\/image_64.png?t=xoxe-8018656481297-8006490984211-8003730983701-ddbaefde61b6b6d1941d3a0ab7052882",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T080JKAE58R-F0806BH7BK5-338a872ea3\/image_80.png?t=xoxe-8018656481297-8006490984211-8003730983701-ddbaefde61b6b6d1941d3a0ab7052882",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T080JKAE58R-F0806BH7BK5-338a872ea3\/image_360.png?t=xoxe-8018656481297-8006490984211-8003730983701-ddbaefde61b6b6d1941d3a0ab7052882",
+                "thumb_360_w": 360,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T080JKAE58R-F0806BH7BK5-338a872ea3\/image_480.png?t=xoxe-8018656481297-8006490984211-8003730983701-ddbaefde61b6b6d1941d3a0ab7052882",
+                "thumb_480_w": 480,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T080JKAE58R-F0806BH7BK5-338a872ea3\/image_160.png?t=xoxe-8018656481297-8006490984211-8003730983701-ddbaefde61b6b6d1941d3a0ab7052882",
+                "original_w": 500,
+                "original_h": 500,
+                "thumb_tiny": "AwAwADCqF5z1UnrTpLbujfnUsQCKVkUDPcdP\/rVIiBcjPy+\/as7mdzPVGeTZ3\/lVsRRxLk9R1JqZYwru3c4FMeMOcv0HbtQ5XBu5TaQM5IHFG4YqdjCnHH4ConeDsMn2GKpMaLRZchQ28n0pGYq23IpqRugwpAY9x1pDCA\/zMcep71FkToSb27\/rTSz9UeM+xoZJMAqQOPzquEw+G4OelCQIWSZyMNGp\/WmCF252hasrGqncBzQwDDBfA9BTv2HfsSQyea52DEY7+pommVZFDY2twR7UkI8uEDviqlwSz57DihK7BastshT7hI747GmowmfBQcVFb3GFEcn3ex9Kdny7oejUWC1iXCkkdSOoppCjGGxn1qGRytwWHXFSbllUlfxFKwrH\/9k=",
+                "permalink": "https:\/\/taidoton.slack.com\/files\/U0808E867QC\/F0806BH7BK5\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T080JKAE58R-F0806BH7BK5-63950392e1",
+                "is_starred": false,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U0808E867QC",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zk02b",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "mä tykkään täst kukasta"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1731166990.375889",
+        "client_msg_id": "63abac41-f924-4c5c-b3f1-4623bdf6b234"
+    }
+]
