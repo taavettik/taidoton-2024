@@ -35,6 +35,7 @@ export type SlackSummary = {
 export type Company = {
   name: string;
   slug: string;
+  tags: string[];
   salaryRange: [number, number];
   description: string;
 };

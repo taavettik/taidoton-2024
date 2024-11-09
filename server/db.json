@@ -805,18 +805,21 @@
     {
       "slug": "taidot_on",
       "name": "TaidotOn",
+      "tags": ["Relaxed", "Work-life balance", "Competitive salary"],
       "salaryRange": [50, 100],
       "description": "TaidotOnilla saat el\u00e4m\u00e4st\u00e4 ilon irti :)"
     },
     {
       "slug": "hatched_consulting",
-      "name": "HATCHED consulting",
+      "name": "HATCHED",
+      "tags": ["High speed", "Grindset", "Torstaikalle"],
       "salaryRange": [30, 105],
       "description": "Hatched consultingilla saat myrkyistä myry irti :)"
     },
     {
       "slug": "onion_corp",
       "name": "Onion corp",
+      "tags": ["Junior friendly", "Work-life balance", "Integrity"],
       "salaryRange": [80, 140],
       "description": "Onion corp! Ou jee"
     }

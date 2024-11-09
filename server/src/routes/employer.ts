@@ -1,5 +1,4 @@
 import { FastifyInstance } from "fastify";
-import { getCompanies } from "../services/employee";
 import { getEmployerDashboardData } from "../services/employer";
 
 export const employerRoutes = (server: FastifyInstance) => {

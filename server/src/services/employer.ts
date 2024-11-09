@@ -48,6 +48,7 @@ export const getEmployerDashboardData = async (slug: string) => {
     name: company.name,
     salaryRange: company.salaryRange,
     description: company.description,
+    tags: company.tags,
     afterHourEmailsRatio,
     messageTone,
     connectedness,
