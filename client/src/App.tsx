@@ -8,7 +8,6 @@ import {
 } from '@tanstack/react-router';
 import { TaavettiPage } from './pages/taavetti/TaavettiPage';
 import { HomePage } from './pages/home/HomePage';
-import { Page } from './components/Page';
 
 const rootRoute = new RootRoute({
   component: () => <Outlet />,

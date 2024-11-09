@@ -8,9 +8,15 @@ interface Props {
 
 export function Page({ children }: Props) {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 20 }}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        paddingTop: 20,
+      }}
+    >
       <div style={{ position: 'absolute', top: 0 }}>
-        <img src={frame} alt="frame" style={{ width: 400, height: '100vh' }} />
+        <img src={frame} alt="frame" style={{ width: 400, height: '800px' }} />
       </div>
 
       <div
