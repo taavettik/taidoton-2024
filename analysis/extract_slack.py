@@ -68,25 +68,13 @@ class MessageEntry(BaseModel):
     timestamp: str
     employeeID: str
     text: str = None
-    isChannel: bool
-    numberOfRecipients: int = 0
-    messageTone: str = ""
-    messageLength: int = 0
-    responseTime: int = 0
 
 
 class SummaryEntry(BaseModel):
     date: str
     employeeID: str
-    department: str
     sent: int
-    received: int
-    internalSent: int
-    externalSent: int
-    avgResponseTime: float
     afterHoursSent: int
-    avgRecipients: float
-    avgThreadLength: float
 
 
 # Function to format the timestamp
@@ -113,6 +101,27 @@ def transform_data(data):
     return output
 
 
+def transform_analysis_data(data) -> List[MessageEntry]:
+    output = []
+    for entry in data:
+        # Only process message entries (skip channel join or other types)
+        if entry.get("type") == "message" and "text" in entry:
+            timestamp = format_timestamp(entry["ts"])
+            channel = "#general"  # Assuming fixed channel as "#general"
+            # Extract user display name or fallback to "Unknown"
+            user = entry.get("user_profile", {}).get("name", "Unknown")
+            # Extract message text
+            text = entry["text"]
+            # Format the message
+            formatted_message = MessageEntry(
+                timestamp=timestamp,
+                employeeID=user,
+                text=text,
+            )
+            output.append(formatted_message)
+    return output
+
+
 def hugo_hihii_slack_gpt_thing():
     with open(
         "./data/slack/all-taidoton/2024-11-09.json", mode="r", encoding="utf-8"
@@ -128,21 +137,20 @@ def hugo_hihii_slack_gpt_thing():
 
 def read_slack_data(file_path: str) -> List[MessageEntry]:
     slack_data: List[MessageEntry] = []
-    hugo_hihii_slack_gpt_thing()
-    return
+    # hugo_hihii_slack_gpt_thing()
+    # return
 
     with open(file_path, mode="r", encoding="utf-8") as file:
-        reader = csv.DictReader(file)
+        data = json.load(file)
+        formatted_messages = transform_analysis_data(data)
+        for message in formatted_messages:
+            yap(message)
 
         slack_data = [
             MessageEntry(
-                timestamp=row["ts"],
-                employeeID=row["user"],
-                text=row.get("text", ""),
-                isChannel=row["type"] == "message",
+                timestamp=row.timestamp, employeeID=row.employeeID, text=row.text
             )
-            for row in reader
-            if row.get("subtype") != "channel_join"
+            for row in formatted_messages
         ]
 
     return slack_data
@@ -176,22 +184,10 @@ def analyze_slack_data(file_path: str) -> List[SummaryEntry]:
         summary = summary_map[key]
 
         summary.sent += 1
-        summary.avgResponseTime += message.responseTime
 
         hour_sent = message.timestamp.split(" ")[1].split(":")[0]
         if int(hour_sent) > 17 or int(hour_sent) < 7:
             summary.afterHoursSent += 1
-        summary.avgRecipients += message.numberOfRecipients
-        summary.avgThreadLength += message.messageLength
-
-        # Calculate averages
-        for summary in summary_map.values():
-            if summary.sent > 0:
-                summary.avgResponseTime = round(summary.avgResponseTime / summary.sent)
-                summary.avgRecipients = round(summary.avgRecipients / summary.sent, 1)
-                summary.avgThreadLength = round(
-                    summary.avgThreadLength / summary.sent, 1
-                )
 
     result = list(summary_map.values())
 
@@ -199,7 +195,8 @@ def analyze_slack_data(file_path: str) -> List[SummaryEntry]:
 
 
 def get_slack_insights() -> List[SummaryEntry]:
-    file_path = "./data/slack_example/messages.csv"
+    file_path = "./data/slack/all-taidoton/2024-11-09.json"
+
     analysis = analyze_slack_data(file_path)
     with open("./results/slack_analysis_result.json", "w") as f:
         f.write(str(analysis))
