@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "analysis"
+version = "0.1.0"
+description = ""
+authors = ["Hugo Hutri <55588133+hugohutri@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openai = "^1.54.3"
+pydantic = "^2.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
