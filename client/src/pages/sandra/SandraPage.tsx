@@ -7,7 +7,9 @@ import { LinearGauge } from '../../components/LinearGauge';
 import { Page } from '../../components/Page';
 import { Stack } from '../../components/Stack';
 import Text from '../../components/Text';
-import logo from '../../../assets/logo.jpeg';
+import company0 from '../../../assets/company0.jpeg';
+import company1 from '../../../assets/company1.jpeg';
+import company2 from '../../../assets/company2.jpeg';
 import { Chip } from '../../components/Chip';
 import { CiCircleCheck } from 'react-icons/ci';
 import { Spacer } from '../../components/Spacer';
@@ -15,6 +17,8 @@ import { theme } from '../../common/theme';
 import { useQuery } from '@tanstack/react-query';
 import { Divider } from '../../components/Divider';
 import { LikeButtonsEtc } from './LikeButtonsEtc';
+
+const images = [company0, company1, company2];
 
 export function SandraPage() {
   const { data: companies } = useQuery<ClientCompanyData[]>({
@@ -36,6 +40,7 @@ export function SandraPage() {
   return (
     <CompanyProfile
       company={company}
+      index={index}
       goNext={() => setIndex((index + 1) % companies.length)}
     />
   );
@@ -43,9 +48,11 @@ export function SandraPage() {
 
 function CompanyProfile({
   company,
+  index,
   goNext,
 }: {
   company: ClientCompanyData;
+  index: number;
   goNext: () => void;
 }) {
   const data = company;
@@ -76,7 +83,7 @@ function CompanyProfile({
           minHeight: '500px',
           zIndex: -1,
           minWidth: '370px',
-          backgroundImage: `url(${logo})`,
+          backgroundImage: `url(${images?.[index] ?? images[0]})`,
         }}
       >
         <div
