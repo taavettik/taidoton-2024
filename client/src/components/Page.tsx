@@ -63,6 +63,7 @@ export function PageHeader({
         paddingBottom: 16,
         marginBottom: 16,
         gap: 8,
+        textAlign: 'center',
       }}
     >
       <Text variant="h1">{title}</Text>
