@@ -73,6 +73,7 @@ class MessageEntry(BaseModel):
 
 
 class SummaryEntry(BaseModel):
+    company: str
     date: str
     employeeID: str
     sent: int
@@ -188,6 +189,7 @@ def analyze_slack_data(file_path: str) -> List[SummaryEntry]:
 
         if key not in summary_map:
             summary_map[key] = SummaryEntry(
+                company="taidot_on",
                 date=date,
                 employeeID=employee_id,
                 department=department,
