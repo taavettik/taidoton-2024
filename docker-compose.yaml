@@ -26,3 +26,5 @@ services:
     volumes:
       - ./server:/app
       - /node_modules
+    ports:
+      - "8081:8080"
