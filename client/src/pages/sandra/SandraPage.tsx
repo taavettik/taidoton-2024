@@ -118,7 +118,7 @@ function CompanyProfile({
               letterSpacing: 15,
             }}
           >
-            {data.name.toUpperCase()}
+            {data.name.split(' ')[0].toUpperCase()}
           </Text>
           <Text
             style={{
@@ -128,7 +128,7 @@ function CompanyProfile({
               letterSpacing: 10,
             }}
           >
-            CONSULTING
+            {data.name.split(' ')?.[1]?.toUpperCase() ?? 'COMPANY'}
           </Text>
         </Stack>
         <Spacer axis="y" size={20} />
