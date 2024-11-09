@@ -18,9 +18,22 @@ interface Db {
     messageLength: number;
     recipientRoleLevel: "below" | "same" | "above";
   }>;
+  emailsSummary: Array<{
+    date: string;
+    employeeID: string;
+    department: string;
+    sent: number;
+    received: number;
+    internalSent: number;
+    externalSent: number;
+    avgResponseTime: number;
+    afterHoursSent: number;
+    avgRecipients: number;
+    avgThreadLength: number;
+  }>;
 }
 
-const defaultData: Db = { emails: [] };
+const defaultData: Db = { emails: [], emailsSummary: [] };
 
 let db: Low<typeof defaultData> | null = null;
 
