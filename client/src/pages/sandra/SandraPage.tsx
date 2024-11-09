@@ -234,7 +234,7 @@ const MetricBar = ({
   percentage: number;
 }) => {
   let value = percentage;
-  console.log('percentage', percentage);
+
   if (value === 0) {
     value = 3;
   }
