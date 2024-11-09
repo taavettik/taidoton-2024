@@ -29,6 +29,8 @@ Generate a JSON response analyzing the tone of each person based on specified tr
 
 The traits to analyze are: ["toxic", "friendly", "supportive", "funny", "inspiring", "bossy"]. You may include decimal values (e.g., 0.25, 0.75) for nuanced ratings.
 
+In addition, provide a `"tone"` for each person as a literal string. Choose one of the following tones that best describes the person’s overall demeanor: `"invitation"`, `"funny"`, `"neutral"`, `"serious"`, `"concerned"`, `"aggressive"`, `"threatening"`, `"informative"`.
+
 Format the JSON strictly as shown below, and do not include any additional text. Follow this structure for each person:
 
 {
@@ -75,6 +77,14 @@ class SummaryEntry(BaseModel):
     employeeID: str
     sent: int
     afterHoursSent: int
+
+    toxic: float
+    friendly: float
+    supportive: float
+    funny: float
+    inspiring: float
+    bossy: float
+    tone: str
 
 
 # Function to format the timestamp
@@ -133,12 +143,11 @@ def hugo_hihii_slack_gpt_thing():
         human_readable_messages_str = "\n".join(formatted_messages)
         scores = process_messages(human_readable_messages_str)
         yap(scores)
+        return json.loads(scores)
 
 
 def read_slack_data(file_path: str) -> List[MessageEntry]:
     slack_data: List[MessageEntry] = []
-    # hugo_hihii_slack_gpt_thing()
-    # return
 
     with open(file_path, mode="r", encoding="utf-8") as file:
         data = json.load(file)
@@ -158,12 +167,22 @@ def read_slack_data(file_path: str) -> List[MessageEntry]:
 
 def analyze_slack_data(file_path: str) -> List[SummaryEntry]:
     slack_data = read_slack_data(file_path)
+    gpt_scores = hugo_hihii_slack_gpt_thing()
+
     summary_map: Dict[str, SummaryEntry] = {}
 
     for message in slack_data:
         date = message.timestamp.split(" ")[0]
         employee_id = message.employeeID
         department = "department"
+
+        yap(employee_id)
+
+        gpt_scores_for_emp = gpt_scores.get(employee_id)
+        yap("gpt_scores_for_emp", gpt_scores_for_emp)
+
+        if employee_id == "Unknown":
+            continue
 
         key = f"{date}-{employee_id}"
 
@@ -180,6 +199,13 @@ def analyze_slack_data(file_path: str) -> List[SummaryEntry]:
                 afterHoursSent=0,
                 avgRecipients=0.0,
                 avgThreadLength=0.0,
+                toxic=gpt_scores_for_emp.get("toxic", -1),
+                friendly=gpt_scores_for_emp.get("friendly", -1),
+                supportive=gpt_scores_for_emp.get("supportive", -1),
+                funny=gpt_scores_for_emp.get("funny", -1),
+                inspiring=gpt_scores_for_emp.get("inspiring", -1),
+                bossy=gpt_scores_for_emp.get("bossy", -1),
+                tone=gpt_scores_for_emp.get("tone", -1),
             )
         summary = summary_map[key]
 

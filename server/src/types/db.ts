@@ -22,6 +22,7 @@ export type SlackSummary = {
   avgResponseTime: number;
   avgAfterHours: number;
 
+  tone?: string;
   toxic?: number;
   friendly?: number;
   supportive?: number;
