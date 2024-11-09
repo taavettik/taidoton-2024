@@ -14,6 +14,7 @@ export type EmailSummary = {
 };
 
 export type SlackSummary = {
+  company: string;
   date: string;
   employeeID: string;
   department: string;
@@ -22,13 +23,13 @@ export type SlackSummary = {
   avgResponseTime: number;
   avgAfterHours: number;
 
-  tone?: string;
   toxic?: number;
   friendly?: number;
   supportive?: number;
   funny?: number;
   inspiring?: number;
   bossy?: number;
+  tone: string;
 };
 
 export type Company = {
