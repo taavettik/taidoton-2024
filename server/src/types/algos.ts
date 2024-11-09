@@ -1,5 +1,6 @@
+import { EmailSummary, SlackSummary } from "./db";
+
 export type SourceData = {
-  emails: [];
-  emailsSummary: [];
-  slack: [];
+  emails: EmailSummary[];
+  slack: SlackSummary[];
 };

@@ -10,14 +10,14 @@ import { ClientCompanyData } from "../types/company";
 export const getCompanies = async () => {
   const db = await getDb();
   const emails = db.data.emails;
+  const slack = db.data.slack;
   const companies = db.data.companies ?? [];
 
   const companiesWithInsights: ClientCompanyData[] = [];
 
   const sourceData: SourceData = {
-    emails: [],
-    emailsSummary: [],
-    slack: [],
+    emails,
+    slack,
   };
 
   for (const company of companies) {
