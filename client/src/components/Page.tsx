@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import frame from '../../assets/frame.png';
+import Text from './Text';
 
 interface Props {
   children?: React.ReactNode;
@@ -32,13 +33,19 @@ export function Page({ children }: Props) {
   );
 }
 
-export function PageHeader({ children }: { children?: ReactNode }) {
+export function PageHeader({
+  title,
+  subtitle,
+}: {
+  title?: ReactNode;
+  subtitle?: ReactNode;
+}) {
   return (
     <div
       style={{
         display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
         borderBottom: '2px solid #736565',
         width: 'calc(100% - 64px)',
         marginBottom: 28,
@@ -46,7 +53,9 @@ export function PageHeader({ children }: { children?: ReactNode }) {
         marginRight: 32,
       }}
     >
-      {children}
+      <Text variant="h1">{title}</Text>
+
+      <Text variant="body">{subtitle}</Text>
     </div>
   );
 }

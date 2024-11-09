@@ -1,9 +1,10 @@
-import React, { HTMLAttributes } from 'react';
+import React, { CSSProperties, HTMLAttributes, ReactNode } from 'react';
 import { theme, TypographyVariant } from '../common/theme';
 
 interface Props extends HTMLAttributes<HTMLSpanElement> {
-  children?: string;
+  children?: ReactNode;
   variant?: TypographyVariant;
+  align?: CSSProperties['textAlign'];
 }
 
 export default function Text({ children, variant, ...props }: Props) {
@@ -16,6 +17,7 @@ export default function Text({ children, variant, ...props }: Props) {
       style: {
         ...theme.typography[variant || 'body'],
         ...props.style,
+        textAlign: props.align,
       },
     },
     children,

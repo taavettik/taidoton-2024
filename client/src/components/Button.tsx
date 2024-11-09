@@ -14,11 +14,12 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
+  user-select: none;
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
   &:active {
-    transform: translateY(2px);
+    transform: translateY(1px);
   }
 `;
