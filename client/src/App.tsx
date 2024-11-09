@@ -9,6 +9,7 @@ import {
 import { TaavettiPage } from './pages/taavetti/TaavettiPage';
 import { HomePage } from './pages/home/HomePage';
 import { SandraPage } from './pages/sandra/SandraPage';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const rootRoute = new RootRoute({
   component: () => <Outlet />,
@@ -39,6 +40,12 @@ const routeTree = rootRoute.addChildren([
 
 const router = new Router({ routeTree });
 
+const queryClient = new QueryClient();
+
 export function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 }

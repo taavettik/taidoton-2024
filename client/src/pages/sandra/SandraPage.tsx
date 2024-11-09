@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { EmployerData } from '../../api';
+import { ClientCompanyData, EmployerData } from '../../api';
 import { api } from '../../common/api';
 import { Button } from '../../components/Button';
 import { Gauge } from '../../components/Gauge';
@@ -12,18 +12,51 @@ import { Chip } from '../../components/Chip';
 import { CiCircleCheck } from 'react-icons/ci';
 import { Spacer } from '../../components/Spacer';
 import { theme } from '../../common/theme';
+import { useQuery } from '@tanstack/react-query';
 
 export function SandraPage() {
-  const [data, setData] = useState<EmployerData>();
+  const { data: companies } = useQuery<ClientCompanyData[]>({
+    queryKey: ['companies'],
+    queryFn: () => {
+      return api.getCompanies();
+    },
+  });
 
-  useEffect(() => {
-    (async () => {
-      const response = await api.getCompanyData('taidot_on');
-      setData(response);
-    })();
-  }, []);
+  const [index, setIndex] = useState(0);
 
-  if (!data) {
+  console.log('companies', companies);
+
+  const company = companies?.[index];
+
+  if (!company) {
+    return <Page>Loading...</Page>;
+  }
+  return (
+    <CompanyProfile
+      company={company}
+      goNext={() => setIndex((index + 1) % companies.length)}
+    />
+  );
+}
+
+function CompanyProfile({
+  company,
+  goNext,
+}: {
+  company: ClientCompanyData;
+  goNext: () => void;
+}) {
+  const data = company;
+  // const [data, setData] = useStateborderSize<EmployerData>();
+
+  // useEffect(() => {
+  //   (async () => {
+  //     const response = await api.getCompanyData('taidot_on');
+  //     setData(response);
+  //   })();
+  // }, []);
+
+  if (!company) {
     return <Page>Loading...</Page>;
   }
 
@@ -181,13 +214,13 @@ export function SandraPage() {
 
         <Stack width="100%" axis="y" align="center" spacing={16}>
           <Gauge
-            progress={data.afterHourEmailsRatio * 100}
-            score={`${data?.afterHourEmailsRatio * 100}%`}
+            progress={data.burnoutRisk * 100}
+            score={`${data?.burnoutRisk * 100}%`}
             size="small"
           />
 
           <Text align="center" variant="body">
-            After hours email ratio
+            Burnout risk ratio
           </Text>
         </Stack>
       </Stack>
@@ -202,7 +235,7 @@ export function SandraPage() {
         ></LinearGauge>
       </Stack>
 
-      <Button>Go wow</Button>
+      <Button onClick={() => goNext()}>Go wow</Button>
     </Page>
   );
 }
