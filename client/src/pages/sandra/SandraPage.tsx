@@ -233,6 +233,12 @@ const MetricBar = ({
   maxName: string;
   percentage: number;
 }) => {
+  let value = percentage;
+  console.log('percentage', percentage);
+  if (value === 0) {
+    value = 3;
+  }
+
   return (
     <Stack axis="y" spacing={4} justify="center" align="center">
       <Stack axis="x" justify="space-between" width="100%" spacing={4}>
@@ -254,7 +260,7 @@ const MetricBar = ({
       >
         <div
           style={{
-            width: `${percentage}%`,
+            width: `${value}%`,
             height: '8px',
             backgroundColor: theme.colors.tinderRed,
             borderRadius: '4px',
