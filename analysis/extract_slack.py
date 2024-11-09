@@ -1,6 +1,6 @@
 import csv
 import json
-from typing import List
+from typing import Dict, List
 from pydantic import BaseModel
 
 
@@ -23,6 +23,20 @@ class MessageEntry(BaseModel):
     responseTime: int = 0
 
 
+class SummaryEntry(BaseModel):
+    date: str
+    employeeID: str
+    department: str
+    sent: int
+    received: int
+    internalSent: int
+    externalSent: int
+    avgResponseTime: float
+    afterHoursSent: int
+    avgRecipients: float
+    avgThreadLength: float
+
+
 def read_slack_data(file_path: str) -> List[MessageEntry]:
     slack_data: List[MessageEntry] = []
 
@@ -40,12 +54,63 @@ def read_slack_data(file_path: str) -> List[MessageEntry]:
             if row.get("subtype") != "channel_join"
         ]
 
-    with open("./results/parsed_slack_messages.json", "w", encoding="utf-8") as f:
-        json.dump(
-            [entry.dict() for entry in slack_data], f, ensure_ascii=False, indent=4
-        )
-
     return slack_data
 
 
-read_slack_data("./data/slack_example/messages.csv")
+def analyze_slack_data(file_path: str) -> List[SummaryEntry]:
+    slack_data = read_slack_data(file_path)
+    summary_map: Dict[str, SummaryEntry] = {}
+
+    for message in slack_data:
+        date = message.timestamp.split(" ")[0]
+        employee_id = message.employeeID
+        department = "department"
+
+        key = f"{date}-{employee_id}"
+
+        if key not in summary_map:
+            summary_map[key] = SummaryEntry(
+                date=date,
+                employeeID=employee_id,
+                department=department,
+                sent=0,
+                received=0,
+                internalSent=0,
+                externalSent=0,
+                avgResponseTime=0.0,
+                afterHoursSent=0,
+                avgRecipients=0.0,
+                avgThreadLength=0.0,
+            )
+        summary = summary_map[key]
+
+        summary.sent += 1
+        summary.avgResponseTime += message.responseTime
+        if " 22" in message.timestamp or " 23" in message.timestamp:
+            summary.afterHoursSent += 1
+        summary.avgRecipients += message.numberOfRecipients
+        summary.avgThreadLength += message.messageLength
+
+        # Calculate averages
+        for summary in summary_map.values():
+            if summary.sent > 0:
+                summary.avgResponseTime = round(summary.avgResponseTime / summary.sent)
+                summary.avgRecipients = round(summary.avgRecipients / summary.sent, 1)
+                summary.avgThreadLength = round(
+                    summary.avgThreadLength / summary.sent, 1
+                )
+
+    result = list(summary_map.values())
+
+    return json.dumps(result, default=lambda o: o.__dict__)
+
+
+def get_slack_insights() -> List[SummaryEntry]:
+    file_path = "./data/slack_example/messages.csv"
+    analysis = analyze_slack_data(file_path)
+    with open("./results/slack_analysis_result.json", "w") as f:
+        f.write(str(analysis))
+    return analysis
+
+
+get_slack_insights()
