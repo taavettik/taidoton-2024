@@ -16,18 +16,6 @@ from openai import OpenAI
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-resp = client.chat.completions.create(
-    messages=[
-        {
-            "role": "user",
-            "content": "Say this is a test",
-        }
-    ],
-    model="gpt-3.5-turbo",
-)
-
-print("resp", resp)
-
 
 def process_messages(msgs: str):
     chat_conpletion_response = client.chat.completions.create(
@@ -136,18 +124,6 @@ def hugo_hihii_slack_gpt_thing():
         human_readable_messages_str = "\n".join(formatted_messages)
         scores = process_messages(human_readable_messages_str)
         yap(scores)
-
-    # scores = process_messages(
-    #     """
-    # Taavetti: "I hate you Hugo! You are the worst person I have ever seen!",
-    # Hugo: "Sorry :( That was my mistake. I am so sorry.",
-    # Taavetti: "I will not forget this! I will kick you out of the company and eat your lunchbox!",
-    # Sandra: "Perkele mennään pelaa padelia. Teidän tappelut ei kiinnosta. Perkele!",
-    # Late: "Moi taavetti :))) Mä oon AI divisioonan johtaja",
-    # Ella: "Moi mä designaan",
-    # """
-    # )
-    # yap(scores)
 
 
 def read_slack_data(file_path: str) -> List[MessageEntry]:
