@@ -86,7 +86,9 @@ def analyze_slack_data(file_path: str) -> List[SummaryEntry]:
 
         summary.sent += 1
         summary.avgResponseTime += message.responseTime
-        if " 22" in message.timestamp or " 23" in message.timestamp:
+
+        hour_sent = message.timestamp.split(" ")[1].split(":")[0]
+        if int(hour_sent) > 17 or int(hour_sent) < 7:
             summary.afterHoursSent += 1
         summary.avgRecipients += message.numberOfRecipients
         summary.avgThreadLength += message.messageLength
