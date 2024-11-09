@@ -1,0 +1,68 @@
+timestamp,numberOfRecipients,numberOfCCs,numberOfBCCs,recipientType,lengthOfThread,responseTime,titleContent,messageContent,recipientRoleLevel,employeeID
+2024-11-07 09:15:23,3,0,0,internal,1,45,"Project Update: Q4 Deliverables","Please see the attached update on our Q4 deliverables. Let me know if there are any changes needed.",Mid-Level,HT234
+2024-11-07 10:02:10,1,1,0,external,3,90,"Partnership Inquiry","Hi there, we are excited about the potential collaboration. Can we schedule a meeting next week to discuss the details?",Senior,HT129
+2024-11-07 10:45:55,5,2,0,internal,5,30,"New Feature Launch Review","Hello team, please review the new feature specs before our meeting this afternoon. Feedback is welcome.",Manager,HT154
+2024-11-07 11:22:37,8,3,1,internal,10,15,"Urgent: Bug Report","A critical bug has been reported by the client. Please prioritize and provide a status update ASAP.",Mid-Level,HT278
+2024-11-07 12:30:12,2,0,0,internal,2,180,"Lunch Break Reminder","Just a reminder to take your lunch break! Stay healthy and energized. :)",Entry-Level,HT345
+2024-11-07 13:14:18,10,1,0,internal,4,25,"Team Outing Feedback","Hope everyone had a great time at the team outing yesterday! Please share your feedback on the event.",Senior,HT198
+2024-11-07 14:10:33,1,0,0,internal,2,50,"Follow-up on Code Review","Could someone please update me on the status of the code review request I sent earlier?",Mid-Level,HT245
+2024-11-07 14:50:33,1,0,1,external,1,120,"Follow-up: Service Inquiry","Hi, just following up on the service inquiry you made last week. Do you need additional assistance?",Entry-Level,HT376
+2024-11-07 15:35:20,4,0,0,internal,7,10,"Code Review Request","The code for the new payment integration is ready for review. Looking forward to your feedback.",Mid-Level,HT245
+2024-11-07 16:25:44,3,2,0,internal,6,60,"Budget Approval Needed","The final budget for the new project has been prepared. Please review and approve.",Senior,HT199
+2024-11-07 17:10:09,2,0,0,internal,1,0,"Reminder: Submit Timesheets","Please remember to submit your timesheets before the end of the day today.",Entry-Level,HT388
+2024-11-08 08:15:30,5,1,0,internal,3,50,"Good Morning! Team Check-in","Good morning, everyone! Let’s have a quick check-in to align on today’s tasks.",Mid-Level,HT263
+2024-11-08 08:45:12,3,0,0,internal,4,10,"Quick Status Update","Just a quick reminder about the sprint progress. We are on track, but let’s push to finalize the remaining tasks.",Mid-Level,HT234
+2024-11-08 09:45:50,1,1,0,external,4,200,"Feedback on Proposal","Thank you for your proposal. We have a few points we would like to discuss in further detail.",Senior,HT118
+2024-11-08 10:20:05,5,0,0,internal,1,0,"Last Call: Sprint Planning","Reminder: Our sprint planning session is in 30 minutes. Be sure to have your notes ready.",Manager,HT154
+2024-11-08 11:00:20,10,0,1,internal,8,5,"Sprint Retrospective Notes","Here are the notes from the sprint retrospective. Please add any additional comments.",Manager,HT154
+2024-11-08 11:40:34,2,0,0,internal,2,15,"Client Call Recap","Recap from the call with the client earlier today. They seem satisfied with our progress.",Mid-Level,HT259
+2024-11-08 12:15:25,3,0,0,internal,3,35,"Follow-up on Budget Approval","Hi all, just checking in on the budget approval request. Could we get this finalized today?",Senior,HT199
+2024-11-08 13:05:45,7,2,0,internal,9,25,"HR Policy Update","We have an important update regarding the new HR policies. Please take a moment to read through the attached document.",Senior,HT189
+2024-11-08 13:45:30,2,0,0,internal,5,10,"Well-being Day Preparation","Let’s ensure everyone has the resources they need for tomorrow’s well-being day.",Manager,HT154
+2024-11-08 14:30:10,1,0,0,internal,1,180,"Reminder: Well-being Day Tomorrow","Just a reminder, tomorrow is a scheduled well-being day. Please take the time to rest and recharge.",Entry-Level,HT358
+2024-11-08 15:50:50,3,0,0,external,5,90,"Proposal for New Client Engagement","Please find attached our proposal for the new client engagement. Let me know if you have any questions.",Manager,HT156
+2024-11-08 16:10:00,6,1,0,internal,7,20,"Wrap-up Meeting Notes","Here are the wrap-up notes from today’s meeting. Please review before tomorrow’s follow-up session.",Mid-Level,HT245
+2024-11-08 16:40:25,6,1,0,internal,6,20,"Quarterly Review Meeting Notes","Attached are the notes and action items from today’s quarterly review meeting.",Senior,HT182
+2024-11-08 17:05:10,3,0,0,internal,2,5,"Thank You Note","Thanks everyone for the hard work this week! Let’s keep the momentum going.",Mid-Level,HT234
+2024-11-08 17:55:55,2,0,0,internal,1,5,"Quick Question: PTO Policy","Hi HR, could you clarify the updated PTO policy regarding carryover days?",Entry-Level,HT321
+2024-11-08 18:15:30,1,0,0,internal,1,0,"Out of Office Notification","I will be out of the office next Monday. Please reach out to my backup, John, for urgent matters.",Mid-Level,HT254
+2024-11-09 08:20:15,4,1,0,internal,2,45,"Morning Stand-up Reminder","Good morning! Quick reminder about our morning stand-up meeting at 9 AM. Please join on time.",Mid-Level,HT234
+2024-11-09 09:05:30,2,0,0,external,1,0,"Follow-up: Partnership Discussion","Hi, following up on our partnership discussion from last week. Do you have any updates on the next steps?",Senior,HT129
+2024-11-09 09:45:12,3,2,0,internal,5,15,"Feature Development Status","We’ve made good progress on the new feature. Please review the updated documentation before our 11 AM sync.",Manager,HT154
+2024-11-09 10:10:00,5,1,0,internal,8,20,"Client Feedback Received","We received feedback from the client regarding the recent update. Let’s discuss this in our noon meeting.",Mid-Level,HT278
+2024-11-09 10:50:45,1,0,0,internal,3,180,"Reminder: Quarterly Review Presentation","Please finalize your slides for the quarterly review presentation by end of the day today.",Senior,HT199
+2024-11-09 11:15:33,6,0,1,internal,6,5,"Sprint Task Clarification","Could someone clarify the task details for the new sprint item? It’s a bit unclear from the notes.",Entry-Level,HT345
+2024-11-09 12:05:18,7,1,0,internal,4,30,"Lunch & Learn Session Today","Reminder: We have a Lunch & Learn session today at 1 PM. The topic is 'Mindfulness at Work'.",Senior,HT198
+2024-11-09 13:20:50,1,0,0,internal,2,90,"Follow-up on Code Review","Could I get a status update on the code review request from earlier this week?",Mid-Level,HT245
+2024-11-09 13:55:40,3,1,0,internal,3,10,"Mid-Sprint Check-in","We are halfway through the sprint. Let’s have a quick check-in to align on progress and blockers.",Manager,HT154
+2024-11-09 14:30:22,2,0,0,external,1,120,"Client Call Confirmation","Hi, confirming our call scheduled for tomorrow at 10 AM. Looking forward to discussing the project roadmap.",Entry-Level,HT376
+2024-11-09 15:10:50,4,2,0,internal,5,60,"Urgent: System Downtime","The system went down temporarily. We need immediate attention to resolve the issue. Please prioritize this.",Mid-Level,HT278
+2024-11-09 15:45:15,1,0,0,internal,1,0,"Reminder: Submit Expense Reports","Reminder to submit your expense reports by end of the week for timely reimbursement.",Entry-Level,HT388
+2024-11-09 16:05:30,10,0,0,internal,7,25,"Feedback on New HR Policy","The new HR policy draft is ready for review. Please provide your feedback by EOD Friday.",Senior,HT189
+2024-11-09 16:30:40,3,1,0,internal,4,35,"Team Meeting Recap","Here’s a recap of today’s team meeting with action items and deadlines.",Mid-Level,HT234
+2024-11-09 17:00:10,2,0,0,internal,2,180,"Planning for Next Week","Please start preparing your tasks for next week’s sprint. Let’s aim for a smooth start on Monday.",Manager,HT154
+2024-11-09 17:25:55,1,0,0,external,1,0,"Outreach: New Client Onboarding","Hello! We are excited to begin the onboarding process for your team. Attached are the initial documents for review.",Mid-Level,HT245
+2024-11-09 17:50:20,5,1,0,internal,6,15,"Status Update: New Client Proposal","Quick update: The new client proposal has been approved. Let’s proceed with the next steps as discussed.",Manager,HT156
+2024-11-09 18:10:30,6,0,0,internal,5,5,"Wrap-up: Well-being Day Feedback","Thanks to everyone who participated in the well-being day. Please share any feedback or suggestions for improvement.",Senior,HT198
+2024-11-09 18:30:45,1,0,0,internal,1,0,"End of Day Wrap-up","Great work today, team! Have a wonderful weekend and see you all on Monday.",Mid-Level,HT234
+2024-11-09 18:45:12,2,0,0,internal,2,0,"Out of Office Notification","I will be out of the office next week. Please reach out to my colleague, Sarah, for urgent matters.",Mid-Level,HT254
+2024-11-10 08:10:20,5,1,0,internal,3,30,"Morning Stand-up Reminder","Good morning! Please be on time for today’s stand-up at 9 AM. Let’s go over our key tasks.",Mid-Level,HT234
+2024-11-10 09:00:45,3,0,0,internal,2,45,"Client Feedback Follow-up","The client provided additional feedback on the recent release. Let’s review it before our meeting.",Senior,HT129
+2024-11-10 09:30:15,1,0,0,internal,1,0,"System Maintenance Notification","Heads up: We have scheduled system maintenance at 10 PM tonight. There may be minor service disruptions.",Entry-Level,HT388
+2024-11-10 10:05:25,6,2,0,internal,4,15,"New Feature Testing Update","The testing for the new feature is almost complete. Please see the attached report for details.",Manager,HT154
+2024-11-10 10:50:12,2,1,0,external,3,120,"Follow-up on Partnership Proposal","Thank you for considering our partnership proposal. Let’s schedule a call to discuss next steps.",Senior,HT129
+2024-11-10 11:15:40,8,0,1,internal,5,10,"Urgent: Code Review Needed","The critical bug fix needs to be reviewed urgently. Could someone from the team take a look?",Mid-Level,HT245
+2024-11-10 12:00:00,10,1,0,internal,6,20,"Team Sync-up Notes","Here are the notes from today’s sync-up meeting. Please review and add your comments.",Mid-Level,HT234
+2024-11-10 12:30:45,1,0,0,internal,2,0,"Reminder: Submit PTO Requests","Friendly reminder to submit your PTO requests for the holiday season by the end of this week.",Entry-Level,HT345
+2024-11-10 13:15:30,4,1,0,internal,7,25,"Product Roadmap Discussion","We have updated the product roadmap based on recent feedback. Please review and provide any inputs.",Manager,HT154
+2024-11-10 13:50:22,3,0,0,external,2,180,"Client Meeting Recap","Thank you for your time today. Here’s a recap of the discussion and next steps.",Mid-Level,HT245
+2024-11-10 14:10:10,2,0,0,internal,1,5,"Quick Question on Sprint Tasks","Could someone clarify the timeline for completing the remaining sprint tasks?",Entry-Level,HT321
+2024-11-10 14:35:50,7,2,0,internal,8,60,"Quarterly Review Prep","Final call for quarterly review prep. Let’s ensure all data is ready by EOD.",Senior,HT199
+2024-11-10 15:05:35,3,0,0,internal,2,15,"Status Update on New Client Onboarding","The onboarding process is progressing smoothly. Attached is the updated checklist.",Mid-Level,HT245
+2024-11-10 15:40:15,6,1,0,internal,5,30,"Follow-up on HR Policy Feedback","Thanks to those who provided feedback on the HR policy draft. Let’s finalize this in our next meeting.",Senior,HT189
+2024-11-10 16:10:50,2,0,0,external,1,0,"Introduction Call Reminder","Hi there! Just a reminder about our introduction call tomorrow at 9 AM. Looking forward to connecting.",Entry-Level,HT376
+2024-11-10 16:45:30,10,0,0,internal,3,20,"Monthly Team Survey","Please take a few minutes to complete this month’s team survey. Your feedback is valuable to us.",Mid-Level,HT234
+2024-11-10 17:20:22,2,1,0,internal,2,10,"Clarification Needed: Project Budget","Could we get clarification on the additional budget request? It wasn’t clear from the notes.",Manager,HT154
+2024-11-10 17:55:45,1,0,0,internal,1,0,"Reminder: System Maintenance Tonight","Reminder: System maintenance will begin at 10 PM tonight. Please save your work before then.",Entry-Level,HT388
+2024-11-10 18:05:50,5,0,0,internal,6,15,"Wrap-up: End of Day Notes","Great work today, everyone! Here are some quick notes before we wrap up for the day.",Mid-Level,HT234
+2024-11-10 18:30:10,1,0,0,internal,1,0,"Out of Office Notice","I will be out of the office next week. Please reach out to Mike for any urgent issues.",Mid-Level,HT254

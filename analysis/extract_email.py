@@ -4,6 +4,18 @@ import json
 from typing import List, Dict
 
 
+class Tone:
+    aggressive = "aggressive"
+    concerned = "concerned"
+    neutral = "neutral"
+
+
+class Role:
+    management = "management"
+    non_management = "non-management"
+    trainee = "trainee"
+
+
 class EmailEntry(BaseModel):
     timestamp: str
     numberOfRecipients: int
@@ -12,17 +24,16 @@ class EmailEntry(BaseModel):
     recipientType: str
     lengthOfThread: int
     responseTime: int
-    titleTone: str
-    titleLength: int
-    messageTone: str
-    messageLength: int
     recipientRoleLevel: str
+    titleContent: str
+    messageContent: str
     employeeID: str
 
 
 class SummaryEntry(BaseModel):
     date: str
     employeeID: str
+    role: Role
     department: str
     sent: int
     received: int
@@ -32,31 +43,30 @@ class SummaryEntry(BaseModel):
     afterHoursSent: int
     avgRecipients: float
     avgThreadLength: float
+    avgMessageTone: Tone  # TODO: implement this hihii
 
 
 def read_email_data(file_path: str) -> List[EmailEntry]:
     email_data = []
     with open(file_path, mode="r", encoding="utf-8") as file:
-        reader = csv.reader(file)
-        next(reader)  # Skip header row
-        for row in reader:
-            email_data.append(
-                EmailEntry(
-                    timestamp=row[1],
-                    numberOfRecipients=int(row[2]),
-                    numberOfCCs=int(row[3]),
-                    numberOfBCCs=int(row[4]),
-                    recipientType=row[5],
-                    lengthOfThread=int(row[6]),
-                    responseTime=int(row[7]),
-                    titleTone=row[8],
-                    titleLength=int(row[9]),
-                    messageTone=row[10],
-                    messageLength=int(row[11]),
-                    recipientRoleLevel=row[12],
-                    employeeID=row[13],
-                )
+        reader = csv.DictReader(file)
+
+        email_data = [
+            EmailEntry(
+                timestamp=row["timestamp"],
+                numberOfRecipients=int(row["numberOfRecipients"]),
+                numberOfCCs=int(row["numberOfCCs"]),
+                numberOfBCCs=int(row["numberOfBCCs"]),
+                recipientType=row["recipientType"],
+                lengthOfThread=int(row["lengthOfThread"]),
+                responseTime=int(row["responseTime"]),
+                recipientRoleLevel=row["recipientRoleLevel"],
+                titleContent=row["titleContent"],
+                messageContent=row["messageContent"],
+                employeeID=row["employeeID"],
             )
+            for row in reader
+        ]
     return email_data
 
 
@@ -65,7 +75,7 @@ def analyze_email_data(file_path: str) -> List[SummaryEntry]:
     summary_map: Dict[str, SummaryEntry] = {}
 
     for email in email_data:
-        date = email.timestamp.split("T")[0]
+        date = email.timestamp.split(" ")[0]
         employee_id = email.employeeID
         department = (
             "Product Dev"
@@ -100,7 +110,8 @@ def analyze_email_data(file_path: str) -> List[SummaryEntry]:
         else:
             summary.externalSent += 1
         summary.avgResponseTime += email.responseTime
-        if "T22" in email.timestamp or "T23" in email.timestamp:
+        hour_sent = email.timestamp.split(" ")[1].split(":")[0]
+        if int(hour_sent) > 17 or int(hour_sent) < 7:
             summary.afterHoursSent += 1
         summary.avgRecipients += email.numberOfRecipients
         summary.avgThreadLength += email.lengthOfThread
@@ -117,15 +128,16 @@ def analyze_email_data(file_path: str) -> List[SummaryEntry]:
     return json.dumps(result, default=lambda o: o.__dict__)
 
 
-def get_employee_insights() -> Dict:
-    file_path = "./data/email/generated_mock_data.csv"
+def get_employee_insights(company_name: str) -> Dict:
+    file_path = f"./data/email/{company_name}.csv"
     analysis = analyze_email_data(file_path)
 
     # save the result as a json to email_analysis_result.json
-    with open("./results/email_analysis_result.json", "w") as f:
+    with open(f"./results/email_analysis_result_{company_name}.json", "w") as f:
         f.write(str(analysis))
 
     return {"analysis": analysis}
 
 
-get_employee_insights()
+company_name = "taidot_on"
+get_employee_insights(company_name)
