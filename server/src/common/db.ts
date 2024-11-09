@@ -33,6 +33,7 @@ interface Db {
     avgThreadLength: number;
   }>;
   companies: Array<{
+    slug: string; // unique id
     name: string;
     salaryRange: [number, number];
     description: string;

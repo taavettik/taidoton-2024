@@ -1,4 +1,4 @@
-export type CompanyData = {
+export type ClientCompanyData = {
   name: string;
   salaryRange: [number, number];
   description: string;
@@ -7,5 +7,15 @@ export type CompanyData = {
   /** 0-1 percentage of how serious or relaxed the environment is */
   seriousOrRelaxed: number;
   /** 0-1 percentage of how much inter-personnel communications there is (excluding bosses) */
+  connectedness: number;
+};
+
+export type EmployerData = {
+  name: string;
+  salaryRange: [number, number];
+  description: string;
+  afterHourEmailsRatio: number;
+  managementTone: string;
+  employeeTone: string;
   connectedness: number;
 };

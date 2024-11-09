@@ -5,14 +5,14 @@ import {
 } from "../common/algos";
 import { getDb } from "../common/db";
 import { SourceData } from "../types/algos";
-import { CompanyData } from "../types/company";
+import { ClientCompanyData } from "../types/company";
 
 export const getCompanies = async () => {
   const db = await getDb();
   const emails = db.data.emails;
   const companies = db.data.companies ?? [];
 
-  const companiesWithInsights: CompanyData[] = [];
+  const companiesWithInsights: ClientCompanyData[] = [];
 
   const sourceData: SourceData = {
     emails: [],

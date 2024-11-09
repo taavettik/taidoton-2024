@@ -1,7 +1,7 @@
 {
   "emails": [
     {
-      "company": "CompanyA",
+      "company": "taito-united",
       "timestamp": "2023-10-01T09:00:00Z",
       "numberOfRecipients": 2,
       "numberOfCCs": 1,
@@ -16,7 +16,7 @@
       "recipientRoleLevel": "same"
     },
     {
-      "company": "CompanyB",
+      "company": "taidoton",
       "timestamp": "2023-10-01T10:15:00Z",
       "numberOfRecipients": 1,
       "numberOfCCs": 0,
@@ -31,7 +31,7 @@
       "recipientRoleLevel": "above"
     },
     {
-      "company": "CompanyC",
+      "company": "goldman-sachs",
       "timestamp": "2023-10-01T11:30:00Z",
       "numberOfRecipients": 5,
       "numberOfCCs": 2,
@@ -46,7 +46,7 @@
       "recipientRoleLevel": "below"
     },
     {
-      "company": "CompanyA",
+      "company": "taito-united",
       "timestamp": "2023-10-01T13:45:00Z",
       "numberOfRecipients": 3,
       "numberOfCCs": 0,
@@ -61,7 +61,7 @@
       "recipientRoleLevel": "same"
     },
     {
-      "company": "CompanyB",
+      "company": "taidoton",
       "timestamp": "2023-10-01T15:00:00Z",
       "numberOfRecipients": 1,
       "numberOfCCs": 0,
@@ -76,7 +76,7 @@
       "recipientRoleLevel": "above"
     },
     {
-      "company": "CompanyC",
+      "company": "goldman-sachs",
       "timestamp": "2023-10-02T08:00:00Z",
       "numberOfRecipients": 2,
       "numberOfCCs": 0,
@@ -91,7 +91,7 @@
       "recipientRoleLevel": "below"
     },
     {
-      "company": "CompanyA",
+      "company": "taito-united",
       "timestamp": "2023-10-02T09:15:00Z",
       "numberOfRecipients": 4,
       "numberOfCCs": 1,
@@ -106,7 +106,7 @@
       "recipientRoleLevel": "same"
     },
     {
-      "company": "CompanyB",
+      "company": "taidoton",
       "timestamp": "2023-10-02T10:30:00Z",
       "numberOfRecipients": 1,
       "numberOfCCs": 0,
@@ -121,7 +121,7 @@
       "recipientRoleLevel": "above"
     },
     {
-      "company": "CompanyC",
+      "company": "goldman-sachs",
       "timestamp": "2023-10-02T12:45:00Z",
       "numberOfRecipients": 3,
       "numberOfCCs": 2,
@@ -136,7 +136,7 @@
       "recipientRoleLevel": "below"
     },
     {
-      "company": "CompanyA",
+      "company": "taito-united",
       "timestamp": "2023-10-02T14:00:00Z",
       "numberOfRecipients": 2,
       "numberOfCCs": 0,
@@ -153,7 +153,7 @@
   ],
   "slack": [
     {
-      "company": "CompanyA",
+      "company": "taito-united",
       "timestamp": "2023-10-01T09:30:00Z",
       "channel": null,
       "responseTime": 300,
@@ -162,7 +162,7 @@
       "recipientRoleLevel": "same"
     },
     {
-      "company": "CompanyB",
+      "company": "taidoton",
       "timestamp": "2023-10-01T10:45:00Z",
       "channel": "general",
       "responseTime": 600,
@@ -171,7 +171,7 @@
       "recipientRoleLevel": "below"
     },
     {
-      "company": "CompanyC",
+      "company": "goldman-sachs",
       "timestamp": "2023-10-01T12:00:00Z",
       "channel": "project-alpha",
       "responseTime": 1200,
@@ -180,7 +180,7 @@
       "recipientRoleLevel": "above"
     },
     {
-      "company": "CompanyA",
+      "company": "taito-united",
       "timestamp": "2023-10-01T14:15:00Z",
       "channel": null,
       "responseTime": 1800,
@@ -189,7 +189,7 @@
       "recipientRoleLevel": "same"
     },
     {
-      "company": "CompanyB",
+      "company": "taidoton",
       "timestamp": "2023-10-01T16:30:00Z",
       "channel": "random",
       "responseTime": 0,
@@ -198,7 +198,7 @@
       "recipientRoleLevel": "below"
     },
     {
-      "company": "CompanyC",
+      "company": "goldman-sachs",
       "timestamp": "2023-10-02T08:30:00Z",
       "channel": null,
       "responseTime": 60,
@@ -207,7 +207,7 @@
       "recipientRoleLevel": "above"
     },
     {
-      "company": "CompanyA",
+      "company": "taito-united",
       "timestamp": "2023-10-02T10:00:00Z",
       "channel": "team-updates",
       "responseTime": 900,
@@ -216,7 +216,7 @@
       "recipientRoleLevel": "same"
     },
     {
-      "company": "CompanyB",
+      "company": "taidoton",
       "timestamp": "2023-10-02T11:15:00Z",
       "channel": "customer-support",
       "responseTime": 3600,
@@ -225,7 +225,7 @@
       "recipientRoleLevel": "below"
     },
     {
-      "company": "CompanyC",
+      "company": "goldman-sachs",
       "timestamp": "2023-10-02T13:30:00Z",
       "channel": null,
       "responseTime": 0,
@@ -234,7 +234,7 @@
       "recipientRoleLevel": "above"
     },
     {
-      "company": "CompanyA",
+      "company": "taito-united",
       "timestamp": "2023-10-02T15:45:00Z",
       "channel": "engineering",
       "responseTime": 1800,
@@ -246,19 +246,22 @@
   "emailsSummary": [],
   "companies": [
     {
-      "name": "CompanyA",
+      "slug": "taito-united",
+      "name": "Taito United",
       "salaryRange": [50, 100],
-      "description": "CompanyA is a great company!"
+      "description": "Taidoton is a great company!"
     },
     {
-      "name": "CompanyB",
+      "slug": "taidoton",
+      "name": "TaidotOn",
       "salaryRange": [32, 40],
-      "description": "CompanyB is super chill lmao!"
+      "description": "TaidotOn is super chill lmao!"
     },
     {
-      "name": "CompanyC",
+      "slug": "goldman-sachs",
+      "name": "Goldman Sachs",
       "salaryRange": [100, 200],
-      "description": "CompanyC is bussin fr fr makin hella bread"
+      "description": "Goldman Sachs is bussin fr fr makin hella bread"
     }
   ]
 }

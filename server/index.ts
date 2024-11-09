@@ -2,12 +2,14 @@ import fastify from "fastify";
 import "./src/common/db";
 import { getDb } from "./src/common/db";
 import { employeeRoutes } from "./src/routes/employee";
+import { employerRoutes } from "./src/routes/employer";
 
 const server = fastify({
   logger: true,
 });
 
 server.register(employeeRoutes);
+server.register(employerRoutes);
 
 server.get("/", async (req, res) => {
   const db = await getDb();
