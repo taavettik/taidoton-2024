@@ -1,16 +1,21 @@
 import React from 'react';
 import { Stack } from './components/Stack';
 import Text from './components/Text';
-import { Page } from './components/Page';
+import { Page, PageHeader } from './components/Page';
+import { Button } from './components/Button';
 
 export function App() {
   return (
     <Page>
-      <Stack axis="y">
-        <Text variant="h1">Taidot on</Text>
+      <PageHeader>
+        <Text variant="h1">Burneroo</Text>
+      </PageHeader>
 
-        <Text variant="body">Taa on vetta</Text>
-      </Stack>
+      <Text variant="body">Much data</Text>
+
+      <Text variant="body">Such wow</Text>
+
+      <Button>Go wow</Button>
     </Page>
   );
 }

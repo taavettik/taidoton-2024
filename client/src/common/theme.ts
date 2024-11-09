@@ -11,6 +11,9 @@ export const theme = {
       fontSize: '32px',
     },
   },
+  colors: {
+    background: '#111418',
+  },
 };
 
 export type TypographyVariant = keyof typeof theme.typography;
