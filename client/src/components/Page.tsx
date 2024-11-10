@@ -12,28 +12,30 @@ export function Page({ children }: Props) {
       style={{
         display: 'flex',
         justifyContent: 'center',
-        paddingTop: 20,
+        // paddingTop: 20,
         position: 'relative',
       }}
     >
-      <div style={{ position: 'absolute', top: 0 }}>
+      {/* <div style={{ position: 'absolute', top: 0 }}>
         <img src={frame} alt="frame" style={{ width: 400, height: '800px' }} />
-      </div>
+      </div> */}
 
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          width: 390 - 80,
-          height: 730,
+          // width: 390 - 80,
+          width: '100%',
+          // height: 730,
+          height: '100%',
           backgroundColor: '#111418',
-          borderRadius: 40,
+          // borderRadius: 40,
           paddingTop: 20,
           paddingLeft: 30,
           paddingRight: 30,
           paddingBottom: 20,
-          marginBottom: 20,
+          // marginBottom: 20,
           zIndex: 20,
           gap: 8,
           overflow: 'auto',

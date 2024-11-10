@@ -73,7 +73,8 @@ function CompanyProfile({
           objectPosition: 'center',
           minHeight: '500px',
           zIndex: -1,
-          minWidth: '370px',
+          minWidth: '100%',
+          // minWidth: '370px',
           backgroundImage: `url(${images?.[index] ?? images[0]})`,
         }}
       >
@@ -166,39 +167,45 @@ function CompanyProfile({
         ))}
       </div>
       <Divider />
-      <Metric
-        title="Communication tone"
-        value={data.seriousOrRelaxed * 100}
-        minName="Serious"
-        maxName="Relaxed"
-      />
-
-      <Spacer axis="y" size={8} />
-      <Metric
-        title="Connectedness"
-        value={data.connectedness * 100}
-        minName="Hierarchical"
-        maxName="Flat"
-      />
-
-      <Spacer axis="y" size={8} />
-      <Metric
-        title="Grindset"
-        value={data.burnoutRisk * 100}
-        minName="Chill"
-        maxName="Sigma"
-      />
-      <Divider />
-
-      <Text
-        variant="body"
-        align="center"
-        style={{ color: theme.colors.secondary }}
+      <div
+        style={{
+          width: 'min(100%, 500px)',
+        }}
       >
-        {data.description}
-      </Text>
+        <Metric
+          title="Communication tone"
+          value={data.seriousOrRelaxed * 100}
+          minName="Serious"
+          maxName="Relaxed"
+        />
 
-      <Spacer axis="y" size={80} />
+        <Spacer axis="y" size={8} />
+        <Metric
+          title="Connectedness"
+          value={data.connectedness * 100}
+          minName="Hierarchical"
+          maxName="Flat"
+        />
+
+        <Spacer axis="y" size={8} />
+        <Metric
+          title="Grindset"
+          value={data.burnoutRisk * 100}
+          minName="Chill"
+          maxName="Sigma"
+        />
+        <Divider />
+
+        <Text
+          variant="body"
+          align="center"
+          style={{ color: theme.colors.secondary }}
+        >
+          {data.description}
+        </Text>
+
+        <Spacer axis="y" size={80} />
+      </div>
       <LikeButtonsEtc onClick={() => goNext()} />
     </Page>
   );
